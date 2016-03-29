@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Street View controls</title>
+		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			#map {
+				height: 100%;
+			}
+			#synchro-webchat .syncro-dialog{
+				width: 400px !important;
+				left: 0 !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<script>
+			// Google Maps
+			function initPano() {
+				// Note: constructed panorama objects have visible: true set by default.
+				var panorama = new google.maps.StreetViewPanorama(
+						document.getElementById('map'), {
+							// position: {lat: 42.345573, lng: -71.098326},
+							position: {lat: 38.893028, lng: -76.998608},
+							addressControlOptions: {
+								position: google.maps.ControlPosition.BOTTOM_CENTER
+							},
+							linksControl: false,
+							panControl: false,
+							enableCloseButton: false
+				});
+			}
+		</script>
+		<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initPano" async defer></script> -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVLsH47IzGVWkpO2ygAZuXB-roVI_UHLc&signed_in=true&callback=initPano" async defer></script>
+
+
+
+		<!-- SYNCROW -->
+		<script>var syncrowebchat = { shortname: "dtt" };</script>
+		<script src="http://stable.syncrowebchat.com/js/v2/embed.js"></script>
+		<div id="syncro-webchat"></div>
+
+		<!-- Homes.com widgets -->
+		<!-- Mortgage calculator -->
+		<style>@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);.HOMES-mortgage-calculator-widget{font: 12px/1.5em 'Open Sans', Arial, sans-serif;color:#484848;padding: 7px 10px 10px;overflow: hidden;clear:both; position: absolute;top: 20px;left: 20px;background:#CFCCC7;}.HOMES-mortgage-calculator-widget::before,.HOMES-mortgage-calculator-widget::after{content: '';display: table;width:100%;clear:both;}.HOMES-mortgage-calculator-widget h1{color:#7b0315;margin:0;font-size:24px;line-height:1em;font-weight:700;text-align:center;}.HOMES-mortgage-calculator-widget .mortgage-calculator-frame{border:0;border-bottom: 1px solid #eeeae9;margin: 0 0 .5em;overflow: hidden;height: 500px;}.HOMES-mortgage-calculator-widget a{font-weight: 700;color:#7b0315;text-decoration:none;font-size:.75em;width:240px;-moz-box-sizing:border-box;box-sizing:border-box;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}.HOMES-mortgage-calculator-widget a:hover{text-decoration: underline;}.HOMES-mortgage-calculator-widget .logo{margin:1em auto;background: transparent url(http://cdn1.static-homes.com/media/portalimgcache/widget/builder/logo-widget.png) 0 0 no-repeat;width:139px;height: 22px;overflow: hidden;direction: ltr;text-indent: -3000px;display:block;float:none;}.HOMES-mortgage-calculator-widget .footer a{margin:0;}.HOMES-mortgage-calculator-widget .footer .link{float:none;width: auto;margin:0;max-width: 50%;display: block;}</style><!--[if lte IE 8]><style>.HOMES-mortgage-calculator-widget h1,.HOMES-mortgage-calculator-widget a{font-family:"Open Sans Bold", Arial, sans-serif;}</style><![endif]--><div class="HOMES-mortgage-calculator-widget"><h1>Mortgage Calculator</h1><a href="http://www.homes.com/widgets/" title="Homes.com" class="logo">Powered By Homes.com</a><iframe src="http://www.homes.com/widget/mortgage-calculator/frame/?text_color=%237b0315&cobrand=" class="mortgage-calculator-frame" width="100%" seamless frameborder="0"></iframe><script src="http://www.homes.com/widget/mortgage-calculator/remote.js?text_color=%237b0315&cobrand=" type="text/javascript"></script></div>
+
+		<!-- Home values widget -->
+		<style>@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700);.HOMES-home-values-widget{font: 12px/1.5em 'Open Sans', Arial, sans-serif;color:#484848;padding: 3px 10px 10px;overflow: hidden;clear:both; position: absolute;top: 20px;right: 20px;background:#CFCCC7;}.HOMES-home-values-widget::before,.HOMES-home-values-widget::after{content: '';display: table;width:100%;clear:both;}.HOMES-home-values-widget h1{color:#7b0315;margin:0;font-size:24px;line-height:1em;font-weight:700;text-align:center;}.HOMES-home-values-widget .home-values-frame{border:0;border-bottom: 1px solid #eeeae9;margin: 0 0 .5em;overflow: hidden;height: 320px;margin-top: 1em;}.HOMES-home-values-widget a{font-weight: 700;color:#7b0315;text-decoration:none;font-size:.75em;-moz-box-sizing:border-box;box-sizing:border-box;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}.HOMES-home-values-widget a:hover{text-decoration: underline;}.HOMES-home-values-widget .logo{background: transparent url(http://cdn1.static-homes.com/media/portalimgcache/widget/builder/logo-widget.png) 0 0 no-repeat;width:139px;height: 22px;overflow: hidden;direction: ltr;text-indent: -3000px;float:right;}.HOMES-home-values-widget .footer a{margin:0;}.HOMES-home-values-widget .footer .link{max-width: 50%;display: block;}</style><!--[if lte IE 8]><style>.HOMES-home-values-widget h1,.HOMES-home-values-widget a{font-family:"Open Sans Bold", Arial, sans-serif;}</style><![endif]--><div class="HOMES-home-values-widget"><h1>Search Home Values</h1><iframe src="http://www.homes.com/widget/home-values/frame/?avm_types=MEAN%2CMEDIAN&text_color=%237b0315&button_color=%23f7841b&cobrand=&location=Washington%2C%20DC" class="home-values-frame" width="100%" seamless frameborder="0"></iframe><div class="footer"><a href="http://www.homes.com/widgets/" title="Homes.com" class="logo">Powered By Homes.com</a></div><script src="http://www.homes.com/widget/home-values/remote.js?avm_types=MEAN%2CMEDIAN&text_color=%237b0315&button_color=%23f7841b&cobrand=&location=Washington%2C%20DC" type="text/javascript"></script></div>
+
+		<!-- custom re-layout -->
+		<script>
+			// window.onload = function(){
+			// 	var chat = document.getElementById("syncro-webchat");
+			// 	var dialog = chat.getElementsByClassName("syncro-dialog")[0];
+
+			// 	// dialog.style.left = 0;
+			// }
+		</script>
+	</body>
+</html>
